@@ -1,0 +1,75 @@
+#root {
+    width: 100%;
+}
+
+.pricing {
+    margin-top: 3rem;
+}
+
+.cards {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 10rem;
+}
+
+.pcard {
+    background-color: #141414;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.phead1 {
+    font-size: 3rem;
+}
+
+.pbtn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.5s ease;
+}
+
+.pbtn:hover {
+    background-color: #ed00eb;
+}
+
+.plist {
+    list-style: none;
+    color: #717171;
+    margin: 1rem;
+}
+
+.plist .plistitem:before {
+    content: '✓';
+}
+
+.plistitem{
+    margin-bottom: 0.5rem;
+}
+
+.pprop
+{
+    color: white;
+}
+
+@media (max-width:900px) {
+    .cards
+    {
+        padding: 1rem;
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .pcard
+    {
+        padding: 1rem;
+    }
+
+}

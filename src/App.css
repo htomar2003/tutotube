@@ -1,0 +1,489 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+::selection {
+    background-color: #ed00eb;
+    color: black;
+}
+
+#navbar {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: black;
+    box-shadow: 0px 3px 25px black;
+    color: #919191;
+    padding-right: 1rem;
+}
+
+
+
+/* This styles the logo in the navbar */
+#navbar #logo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+/* This styles the logo image to be used in the navbar */
+#navbar #logo img {
+    height: 40px;
+    width: 40px;
+    color: #ed00eb;
+    cursor: pointer;
+}
+
+/* This styles the unlisted links in the navbar */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+/* This changes the appearance of the listed links in the navbar */
+#navbar ul li {
+    width: 80px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    place-items: center;
+    font-weight: 600;
+}
+
+#navbar ul li a {
+    color: #919191;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* This sets the hover action of the navbar links */
+#navbar ul:hover .active {
+    background: none;
+    border: none;
+}
+
+#navbar ul li a:hover {
+    color: white;
+}
+
+.tryfree {
+    background-color: #292929;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    transition: 0.3s all ease;
+}
+
+.tryfree-logo
+{
+    cursor: pointer;
+    width: 40px !important;
+    height: 40px;
+    border-radius: 50% !important;
+    padding: 0.1rem !important;
+}
+
+.tryfree:hover {
+    background-color: #3b3b3b;
+}
+
+.credit-list
+{
+    border-radius: 5px;
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    background-color: #3b3b3b;
+    padding: 10px;
+    width: 150px;
+}
+
+.credit-list:hover
+{
+    background-color: #6c6c6c;
+}
+.app {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.head {
+    color: white;
+    text-align: center;
+    font-size: 4.2rem;
+    line-height: 1.05;
+    font-weight: 700;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    color: white;
+    background-color: #ed00eb;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    border-radius: 5px;
+    transition: 0.4s all ease;
+}
+
+.btn:hover {
+    background-color: #b300b0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    width: 100%;
+    color: #919191;
+    position: relative;
+}
+
+.main-img {
+    background: url(../public/submita.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 265px;
+    top: 10px;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.main input {
+    outline: none;
+    height: 50px;
+    overflow: auto;
+    background-color: #303030;
+    color: #919191;
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.query {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.query-img {
+    background: url("../public/submita.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 265px;
+}
+
+.query-img1 {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 265px;
+}
+
+.answer {
+    display: none;
+    border-radius: 5px;
+    width: 60%;
+    align-items: center;
+    color: #919191;
+    background-color: #303030;
+    margin-top: 4px;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+
+.error-m {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.error {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #f8d7da;
+    border: 2px solid #f5c6cb;
+    color: #721c24;
+    font-weight: 500;
+    z-index: 3;
+}
+
+.closebtn {
+    background: none;
+    border: none;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.workflow {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    gap: 2rem;
+    align-content: center;
+}
+
+.work-p {
+    color: #8f8f8f;
+    width: 60%;
+    padding: 2rem;
+}
+
+
+.work-p .head {
+    font-size: 3rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    text-align: left;
+}
+
+.work-img {
+    padding: 1.3rem 0.5rem 0.2rem 0.5rem;
+    background-color: #292929;
+    border-radius: 30px;
+}
+
+.work-imgp {
+    padding-left: 10px;
+}
+
+.work-video {
+    border-radius: 30px;
+    width: 100%;
+}
+
+.card-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-bottom: 10rem;
+}
+
+.card-head {
+    font-size: 3rem;
+    margin: 2rem;
+    margin-top: 10rem;
+}
+
+.experience {
+    font-size: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 5rem;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+}
+
+
+#navbar-toggle,
+.navbar-toggle-icons {
+    display: none;
+}
+
+.navbar-toggle-label {
+    display: none;
+}
+
+@media (max-width:900px) {
+    .head {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #navbar #logo {
+        margin-left: 1rem;
+    }
+
+    #navbar {
+        width: 100%;
+        gap: 0px;
+        justify-content: space-between;
+        padding-right: 0rem;
+    }
+
+    #navbar ul {
+        display: none;
+    }
+
+    .navbar-toggle-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .navbar-toggle-icon {
+        height: 2px;
+        width: 20px;
+        background-color: white;
+        margin-right: 15px;
+    }
+
+    #navbar-toggle:checked~.navbar-toggle-label {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        background-color: rgb(0, 0, 0);
+        padding: 1rem;
+        gap: 1rem;
+        left: 0;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .navbar-toggle-label li,
+    a {
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .main input {
+        font-size: 0.8rem;
+        height: 40px;
+        padding: 0.5rem;
+        width: 80%;
+    }
+
+    .btn {
+        padding: 0.7rem;
+        font-size: 0.7rem;
+    }
+
+    .main-p {
+        font-size: 1rem;
+    }
+
+    .main-img {
+        background: url(../public/submitb.png) no-repeat;
+        right: 50px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .workflow {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .work-p {
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .work-p p {
+        font-size: 0.8rem;
+    }
+
+    .work-imgp {
+        font-size: 1.8rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .work-p .head {
+        font-size: 2rem;
+    }
+
+    .experience {
+        margin: 2rem;
+    }
+
+    .card-div {
+        flex-direction: column;
+        gap: 8rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
